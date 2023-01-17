@@ -6,10 +6,13 @@ import lombok.Data;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
-public class BuilderRequest {
+public class BuilderRequest implements Serializable {
+    private static final long serialVersionUID = -8819282258597236376L;
+
     @NotNull(message = "The field has not been informed")
     private Integer externalId;
     @NotBlank(message = "The field has not been informed")
