@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: "api-builder"
+  datasource:
+    url: "jdbc:mysql://localhost:3307/beans"
+    username: beans
+    password: beans
+    driver-class-name: com.mysql.cj.jdbc.Driver
+com:
+  opentrends:
+    api-builder:
+      providers:
+        jenkins:
+          url: http://localhost:${wiremock.server.port}
+          job: CI
+          user: admin
+          pass: admin
