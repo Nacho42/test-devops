@@ -1,0 +1,9 @@
+com:
+  opentrends:
+    api-builder:
+      providers:
+        jenkins:
+          url: http://localhost:${wiremock.server.port}
+          job: CI
+          user: admin
+          pass: admin

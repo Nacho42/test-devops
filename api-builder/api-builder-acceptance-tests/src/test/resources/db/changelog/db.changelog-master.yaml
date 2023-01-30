@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_beans_table
+      author: Nacho Dones
+      changes:
+        - createTable:
+            tableName: beans
+            columns:
+              - column:
+                  name: external_id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    updatable: false
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+                    updatable: true
+              - column:
+                  name: repository_path
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+                    updatable: true
+              - column:
+                  name: version
+                  type: varchar(12)
+                  constraints:
+                    nullable: false
+                    updatable: true

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: "api-builder"
+  liquibase:
+    enabled: true
+  datasource:
+    url: "jdbc:tc:mysql:5.7.34://localhost:3306/beans"
+    username: beans
+    password: beans
+com:
+  opentrends:
+    api-builder:
+      providers:
+        jenkins:
+          url: http://localhost:${wiremock.server.port}
+          job: CI
+          user: admin
+          pass: admin

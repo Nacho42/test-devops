@@ -1,0 +1,54 @@
+{
+  "mappings": [
+    {
+      "priority": 10,
+      "request": {
+        "method": "GET",
+        "urlPath": "/crumbIssuer/api/json"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "crumb": "ab6c63d508778a775a2de706b27cafc073e49f44254e0e01df4314d4f7bf00db"
+        },
+        "headers": {
+          "Set-Cookie": "JSESSIONID.ee86872f=node0q3wjmomfhkohufu1o5jthdrh1.node0",
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "priority": 10,
+      "request": {
+        "method": "POST",
+        "urlPath": "/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "status": "OK",
+          "data": {
+            "tokenName": "token",
+            "tokenValue": "b66b102859dba810be291b6cddabf3af4cf4b4ba44e32e27660c079b2a21aecb"
+          }
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "priority": 10,
+      "request": {
+        "method": "POST",
+        "urlPath": "/job/CI/build"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  ]
+}
