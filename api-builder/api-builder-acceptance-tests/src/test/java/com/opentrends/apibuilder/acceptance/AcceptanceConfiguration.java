@@ -31,9 +31,6 @@ public class AcceptanceConfiguration {
     @Autowired
     WireMockServer wireMockServer;
 
-    @Value("${wiremock.port:9091}")
-    private int port;
-
     @PostConstruct
     public void runApplication(){
         wireMockConfiguration.start();

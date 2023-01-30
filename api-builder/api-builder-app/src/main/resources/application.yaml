@@ -5,19 +5,19 @@ spring:
   application:
     name: "api-builder"
   datasource:
-    url: "jdbc:mysql://localhost:3307/beans"
-    username: beans
-    password: beans
+    url: "jdbc:mysql://${DB_HOST}/${DB}"
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
 com:
   opentrends:
     api-builder:
       providers:
         jenkins:
-          url: jenkins
-          job: jenkins
-          user: jenkins
-          pass: jenkins
+          url: ${JENKINS_HOST}
+          job: ${CI_JOB}
+          user: ${JENKINS_USER}
+          pass: ${JENKINS_PASS}
 
 springdoc:
   api-docs:

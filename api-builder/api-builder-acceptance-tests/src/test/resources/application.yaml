@@ -1,11 +1,12 @@
 spring:
   application:
     name: "api-builder"
+  liquibase:
+    enabled: true
   datasource:
-    url: "jdbc:mysql://localhost:3307/beans"
+    url: "jdbc:tc:mysql:5.7.34://localhost:3306/beans"
     username: beans
     password: beans
-    driver-class-name: com.mysql.cj.jdbc.Driver
 com:
   opentrends:
     api-builder:
