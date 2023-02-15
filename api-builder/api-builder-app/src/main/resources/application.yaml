@@ -27,6 +27,7 @@ springdoc:
 
 logging:
   file:
+    name: "api-builder"
     path: "/api-builder/logs"
     max-size: "10MB"
     max-history: "10"
